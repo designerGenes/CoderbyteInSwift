@@ -32,7 +32,7 @@ func StringScramble(_ str1: String, _ str2: String) -> String {
     return "true"
 }
 
-var testCases = [("heloooolwrdlla", "helloworld"), ("coodrebtqqkye", "coderbyte"), ("win33er", "niwner"),
+var testCases = [("heloooolwrdlla", "helloworld"), ("coodrebtqqkye", "coderbyte"), ("win33er", "winner"),
                 ("yelowrqwedlk", "yellowred"), ("lettrrkakaeaaaqq", "letter")]
 
 for testCase in testCases {
