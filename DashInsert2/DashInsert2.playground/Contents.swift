@@ -12,16 +12,16 @@ import Foundation
 
 func dashInsertII(raw: String) -> String {
     let rawIntArr = raw.compactMap({Int(String($0))})
-    var out = [String]()
+    var out = ""
     (0..<rawIntArr.count - 1).forEach { k in
         let l = rawIntArr[k]
         let r = rawIntArr[k + 1]
         let matchingEvens = (l % 2 + r % 2) < 1 && (l != 0 && r != 0)
         let matchingOdds = (l % 2 + r % 2) > 1 && (l != 0 && r != 0)
-        out.append(String(rawIntArr[k]) + (matchingEvens ? "*" : matchingOdds ? "-" : ""))
+        out += String(rawIntArr[k]) + (matchingEvens ? "*" : matchingOdds ? "-" : "")
     }
-    out.append(String(rawIntArr[rawIntArr.count - 1]))
-    return out.reduce("", +)
+    out += String(rawIntArr[rawIntArr.count - 1])
+    return out
 }
 
 print(dashInsertII(raw: "56647304"))
